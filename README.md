@@ -38,7 +38,7 @@ $ cd clash-for-linux
 - 运行启动脚本
 
 ```bash
-$ sh start.sh
+$ bash start.sh
 Clash订阅地址可访问！                                      [  OK  ]
 配置文件config.yaml下载成功！                              [  OK  ]
 服务启动成功！                                             [  OK  ]
