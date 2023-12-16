@@ -49,6 +49,7 @@ unset http_proxy
 unset https_proxy
 unset no_proxy
 
+# 20231216 smart: curl not run ok, i dont know why.... whats the difference with wget?
 # # 检查url是否有效
 # Text1="Clash订阅地址可访问！"
 # Text2="Clash订阅地址不可访问！"
