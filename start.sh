@@ -49,17 +49,17 @@ unset http_proxy
 unset https_proxy
 unset no_proxy
 
-# 检查url是否有效
-Text1="Clash订阅地址可访问！"
-Text2="Clash订阅地址不可访问！"
-curl -o /dev/null -s -m 10 --connect-timeout 10 -w %{http_code} $URL | grep '[23][0-9][0-9]' &>/dev/null
-if_success $Text1 $Text2
+# # 检查url是否有效
+# Text1="Clash订阅地址可访问！"
+# Text2="Clash订阅地址不可访问！"
+# curl -o /dev/null -s -m 10 --connect-timeout 10 -w %{http_code} $URL | grep '[23][0-9][0-9]' &>/dev/null
+# if_success $Text1 $Text2
 
 # 拉取更新config.yml文件
 Text3="配置文件config.yaml下载成功！"
 Text4="配置文件config.yaml下载失败，退出启动！"
-# wget -q -O $Temp_Dir/clash.yaml $URL
-curl -s -o $Temp_Dir/clash.yaml $URL
+wget -q -O $Temp_Dir/clash.yaml $URL
+# curl -s -o $Temp_Dir/clash.yaml $URL
 if_success $Text3 $Text4
 
 # 取出代理相关配置 
